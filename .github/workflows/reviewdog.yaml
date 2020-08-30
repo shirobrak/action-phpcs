@@ -1,0 +1,33 @@
+name: reviewdog
+on: [pull_request]
+jobs:
+  phpcs:
+    name: runner / phpcs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: phpcs-github-pr-check
+        uses: ./
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-check
+          phpcs_flags: --standard=PSR12 ./testdata/
+      - name: phpcs-github-check
+        uses: ./
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-check
+          phpcs_flags: --standard=PSR12 ./testdata/
+      - name: phpcs-github-pr-review
+        uses: ./
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          phpcs_flags: --standard=PSR12 ./testdata/
+      - name: phpcs-subproject-github-pr-review
+        uses: ./
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          workdir: test-subproject
+          phpcs_flags: --standard=./phpcs.xml ./sub-testdata
