@@ -45,7 +45,7 @@ Optional. Flags and args of phpcs command. Default: '.'
 
 ### `workdir`
 
-Optional. The directory from which to look for and run eslint. Default '.'
+Optional. The directory from which to look for and run phpcs. Default '.'
 
 ## Example usage
 
