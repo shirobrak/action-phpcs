@@ -1,6 +1,10 @@
 # GitHub Action: Run phpcs with reviewdog
 
 [![Docker Image CI](https://github.com/shirobrak/action-phpcs/workflows/Docker%20Image%20CI/badge.svg)](https://github.com/shirobrak/action-phpcs/actions)
+[![depup](https://github.com/shirobrak/action-phpcs/workflows/depup/badge.svg)](https://github.com/shirobrak/action-phpcs/actions?query=workflow%3Adepup)
+[![release](https://github.com/shirobrak/action-phpcs/workflows/release/badge.svg)](https://github.com/shirobrak/action-phpcs/actions?query=workflow%3Arelease)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/shirobrak/action-phpcs?logo=github&sort=semver)](https://github.com/shirobrak/action-phpcs/releases)
+[![action-bumpr supported](https://img.shields.io/badge/bumpr-supported-ff69b4?logo=github&link=https://github.com/haya14busa/action-bumpr)](https://github.com/haya14busa/action-bumpr)
 
 This action runs [phpcs](https://github.com/squizlabs/PHP_CodeSniffer) with [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to improve code review experience.
 
