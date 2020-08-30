@@ -61,7 +61,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: phpcs
-        uses: shirobrak/action-phpcs@v1
+        uses: shirobrak/action-phpcs@v1.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review  # Change reporter.
