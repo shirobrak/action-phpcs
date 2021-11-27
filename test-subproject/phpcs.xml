@@ -2,4 +2,5 @@
 <ruleset name="MyProjectRule">
     <description>MyProjectRule Coding Standards</description>
     <rule ref="PSR12" />
+    <rule ref="WordPress" />
 </ruleset>
