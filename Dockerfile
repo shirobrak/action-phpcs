@@ -2,7 +2,7 @@ FROM php:alpine3.14
 
 RUN apk --no-cache add jq git
 
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.4.4 /usr/bin/composer /usr/bin/composer
 
 ENV COMPOSER_HOME=/root/.composer
 ENV COMPOSER_ALLOW_SUPERUSER 1
