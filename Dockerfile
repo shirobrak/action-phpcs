@@ -23,7 +23,7 @@ RUN composer global require --dev \
 ENV PATH $PATH:$COMPOSER_HOME/vendor/bin
 
 # Install reviewdog
-ENV REVIEWDOG_VERSION=v0.13.1
+ENV REVIEWDOG_VERSION=v0.14.1
 RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ ${REVIEWDOG_VERSION}
 
 COPY entrypoint.sh /entrypoint.sh
